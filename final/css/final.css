@@ -1,0 +1,26 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.button {
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #dddddd;
+    color: #222222;
+    box-shadow: inset -4px -4px 5px 0px #7b7b7b;
+    border-color: #bbbbbb;
+}
+
+.button-yellow {
+    background-color: rgb(240, 236, 28);
+    box-shadow: inset -4px -4px 5px rgb(70, 57, 3);
+}
+
+.button-yellow:hover {
+    background-color: #a58d04;
+    color: #ffffff;
+    box-shadow: inset -4px -4px 5px #333333;
+}
