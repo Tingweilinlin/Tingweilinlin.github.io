@@ -20,12 +20,13 @@
 <body>
     <h1 class="text-center">猜數字遊戲</h1>
     <h3 class="text-center">請輸入4個阿拉伯數字，你有10次機會</h3>
+    <h5 class="text-center" style="color:red">(數字不能重複唷)</h5>
     <h5 class="text-center">a:數字與位置皆正確</h5>
     <h5 class="text-center">b:數字正確，位置錯誤</h5>
 
 
 
-    <input id="input" type="text" style="width: 100%;" onkeyup="value=value.replace(/[^\d]/g,'') "></input>
+    <input id="input" type="text" style="width: 100%;" minlength="4" maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'') "></input>
 
     <button id="submit" class="my-3 btn btn-primary btn-block">GO!</button>
     <table class="table table-striped">
