@@ -13,31 +13,36 @@ $(() => {
 
 
     $('#submit').on('click', () => {
+        // alert('answer=' + answer);
+        if (checkRepeat($('#input').val())) {
+            alert('(數字不能重複唷)');
+        } else {
 
-        if (times <= 9) {
+            if (times <= 9) {
 
-            var a = 0
-            var b = 0;
-            var x = $('#input').val();
-            $('#input').val('');
+                var a = 0
+                var b = 0;
+                var x = $('#input').val();
+                // $('#input').val('');
 
-            for (var i = 0; i < 4; i++) {
-                var index = answer.indexOf(x[i]);
-                if (index != -1) {
-                    if (index == i) {
-                        a++;
-                    } else {
-                        b++;
+                for (var i = 0; i < 4; i++) {
+                    var index = answer.indexOf(x[i]);
+                    if (index != -1) {
+                        if (index == i) {
+                            a++;
+                        } else {
+                            b++;
+                        }
                     }
                 }
-            }
-            if (a == 4) {
-                alert('You Got It！');
-            }
-            times += 1;
-            $('tbody').append('<tr><td>' + times + '</td><td>' + x + '</td><td>' + 'a:' + a + '  ' + 'b:' + b + '</td></tr>');
-        } else { if (times == 10) { alert('10次結束了，沒機會了，正確答案是' + answer) } }
+                if (a == 4) {
+                    alert('You Got It！');
+                }
+                times += 1;
+                $('tbody').append('<tr><td>' + times + '</td><td>' + x + '</td><td>' + 'a:' + a + '  ' + 'b:' + b + '</td></tr>');
+            } else { if (times == 10) { alert('10次結束了，沒機會了，正確答案是' + answer) } }
 
+        }
     })
 
 
